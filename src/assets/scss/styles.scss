@@ -31,10 +31,12 @@ root{
 --z-fixed: 100;
 }
 @media screen and (min-width: 968px){
-  --big-font-size: 3.5rem;
-  --h2-font-size: 2rem;
-  --normal-font-size: 1rem;
-  --smaller-font-size: .875rem;
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
 }
 
 /*===== BASE =====*/
@@ -442,7 +444,7 @@ img{
   }
 }
 
-@media screen and(min-width: 768px){
+@media screen and (min-width: 768px){
   body{
     margin: 0;
   }
