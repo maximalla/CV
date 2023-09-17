@@ -9,6 +9,8 @@ import { SkillsComponent } from './components/skills/skills.component';
 import { WorkComponent } from './components/work/work.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { EducationComponent } from './components/education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,12 @@ import { FooterComponent } from './components/footer/footer.component';
     SkillsComponent,
     WorkComponent,
     ContactComponent,
-    FooterComponent
+    FooterComponent,
+    EducationComponent,
+    ExperienceComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
