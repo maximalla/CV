@@ -15,33 +15,35 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './pages/cv/components/header/header.component';
 import { HomeComponent } from './pages/cv/components/home/home.component';
 import { AboutComponent } from './pages/cv/components/about/about.component';
+import { ProjectsComponent } from './pages/cv/components/projects/projects.component';
 import { SkillsComponent } from './pages/cv/components/skills/skills.component';
 import { ContactComponent } from './pages/cv/components/contact/contact.component';
 import { FooterComponent } from './pages/cv/components/footer/footer.component';
 import { EducationComponent } from './pages/cv/components/education/education.component';
-import { ProjectsComponent } from './pages/cv/components/projects/projects.component';
 import { CVComponent } from './pages/cv/cv.component';
-import { CalculatorComponent } from './pages/projects/pages/calculator/calculator.component';
-import { ButtonActionComponent } from './pages/projects/pages/calculator/components/button-action/button-action.component';
-import { ButtonNumericComponent } from './pages/projects/pages/calculator/components/button-numeric/button-numeric.component';
-import { ButtonOperationComponent } from './pages/projects/pages/calculator/components/button-operation/button-operation.component';
-import { DisplayComponent } from './pages/projects/pages/calculator/components/display/display.component';
-import { GeneralButtonComponent } from './pages/projects/pages/calculator/components/general-button/general-button.component';
-import { DisplayPipe } from './pages/projects/pages/calculator/shared/display.pipe';
-import { EnumsPipe } from './pages/projects/pages/calculator/shared/enums.pipe';
-import { MovieComponent } from './pages/projects/pages/movies/components/movie/movie.component';
-import { MoviesHeaderComponent } from './pages/projects/pages/movies/components/movies-header/header.component';
-import { PaginatorComponent } from './pages/projects/pages/movies/components/paginator/paginator.component';
-import { PopupComponent } from './pages/projects/pages/movies/components/popup/popup.component';
-import { MoviesComponent } from './pages/projects/pages/movies/movies.component';
-import { RateColorPipe } from './pages/projects/pages/movies/shared/rate-color.pipe';
-import { GameBoardComponent } from './pages/projects/pages/snake/game-board/game-board.component';
-import { AnalogClockComponent } from './pages/projects/pages/watches/components/analog-clock/analog-clock.component';
-import { NumericComponent } from './pages/projects/pages/watches/components/digital-clock/components/numeric/numeric.component';
-import { SeparatorComponent } from './pages/projects/pages/watches/components/digital-clock/components/separator/separator.component';
-import { DigitalClockComponent } from './pages/projects/pages/watches/components/digital-clock/digital-clock.component';
-import { WatchesComponent } from './pages/projects/pages/watches/watches.component';
-import { SnakeComponent } from './pages/projects/pages/snake/snake.component';
+import { ProjectHeaderComponent } from './pages/my-projects/components/project-header/project-header.component';
+import { MyProjectsComponent } from './pages/my-projects/my-projects.component';
+import { CalculatorComponent } from './pages/my-projects/pages/calculator/calculator.component';
+import { ButtonActionComponent } from './pages/my-projects/pages/calculator/components/button-action/button-action.component';
+import { ButtonNumericComponent } from './pages/my-projects/pages/calculator/components/button-numeric/button-numeric.component';
+import { ButtonOperationComponent } from './pages/my-projects/pages/calculator/components/button-operation/button-operation.component';
+import { DisplayComponent } from './pages/my-projects/pages/calculator/components/display/display.component';
+import { GeneralButtonComponent } from './pages/my-projects/pages/calculator/components/general-button/general-button.component';
+import { DisplayPipe } from './pages/my-projects/pages/calculator/shared/display.pipe';
+import { EnumsPipe } from './pages/my-projects/pages/calculator/shared/enums.pipe';
+import { MovieComponent } from './pages/my-projects/pages/movies/components/movie/movie.component';
+import { MoviesHeaderComponent } from './pages/my-projects/pages/movies/components/movies-header/header.component';
+import { PaginatorComponent } from './pages/my-projects/pages/movies/components/paginator/paginator.component';
+import { PopupComponent } from './pages/my-projects/pages/movies/components/popup/popup.component';
+import { MoviesComponent } from './pages/my-projects/pages/movies/movies.component';
+import { RateColorPipe } from './pages/my-projects/pages/movies/shared/rate-color.pipe';
+import { GameBoardComponent } from './pages/my-projects/pages/snake/game-board/game-board.component';
+import { SnakeComponent } from './pages/my-projects/pages/snake/snake.component';
+import { AnalogClockComponent } from './pages/my-projects/pages/watches/components/analog-clock/analog-clock.component';
+import { NumericComponent } from './pages/my-projects/pages/watches/components/digital-clock/components/numeric/numeric.component';
+import { SeparatorComponent } from './pages/my-projects/pages/watches/components/digital-clock/components/separator/separator.component';
+import { DigitalClockComponent } from './pages/my-projects/pages/watches/components/digital-clock/digital-clock.component';
+import { WatchesComponent } from './pages/my-projects/pages/watches/watches.component';
 
 @NgModule({
   declarations: [
@@ -57,8 +59,9 @@ import { SnakeComponent } from './pages/projects/pages/snake/snake.component';
     CVComponent,
 
     // for calculator / movies / watches
+
     AppComponent,
-    HeaderComponent,
+    ProjectHeaderComponent,
     WatchesComponent,
     AnalogClockComponent,
     DigitalClockComponent,
@@ -82,6 +85,7 @@ import { SnakeComponent } from './pages/projects/pages/snake/snake.component';
 
     // for snake
     GameBoardComponent,
+    MyProjectsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 .content {
+  /*margin-top: var(--header-height);*/
   width: calc(100vw - 15px);
   display: flex;
   flex-wrap: wrap;
