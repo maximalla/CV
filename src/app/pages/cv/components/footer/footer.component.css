@@ -6,21 +6,21 @@
   padding: 2rem 0;
 }
 
-.footer__title {
+.footer-title {
   font-size: 2rem;
   margin-bottom: var(--mb-4);
 }
 
-.footer__social {
+.footer-social {
   margin-bottom: var(--mb-4);
 }
 
-.footer__icon {
+.footer-icon {
   font-size: 1.5rem;
   color: #fff;
   margin: 0 var(--mb-2);
 }
 
-.footer__copy {
+.footer-copy {
   font-size: var(--smaller-font-size);
 }

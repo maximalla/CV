@@ -1,0 +1,28 @@
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: rgb(63, 156, 232);
+  width: 300px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.286);
+  border-radius: 5px;
+  margin: 6px;
+}
+
+input {
+  background-color: rgb(63, 156, 232);
+  color: white;
+  display: flex;
+  font-size: 25px;
+  width: 98%;
+  height: 50px;
+  border: 1px solid gray;
+  margin: 3px;
+  border-radius: 10px;
+  outline: none;
+  cursor: default;
+  user-select: none;
+  text-align: right;
+}

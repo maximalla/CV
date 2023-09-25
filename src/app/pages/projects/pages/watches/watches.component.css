@@ -1,0 +1,23 @@
+
+.content {
+  width: 100%;
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+  .half {
+    width: 100%;
+  }
+}

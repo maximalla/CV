@@ -1,0 +1,14 @@
+.spanClock{
+  height: min-content;
+  background-color: yellow;
+  font-size: 6vw;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 20px;
+  padding: 0 5px;
+}
+@media screen and (max-width: 1024px){
+  .spanClock{
+    font-size: 12vw;
+  }
+}

@@ -1,0 +1,55 @@
+<div class="movie">
+  <div class="movie-img">
+    <img
+      (click)="openPopup()"
+      [alt]="data.title"
+      [src]="
+        data.posterPath
+          ? 'https://image.tmdb.org/t/p/original' + data.posterPath
+          : '/assets/images/no-poster.png'
+      "
+    />
+    <div class="rate">
+      <div class="rate-img"></div>
+      <div class="rate-count">{{ data.voteAverage }}</div>
+    </div>
+    <div class="watched">
+      <div class="watched-img"></div>
+      <div class="watched-count">{{ data.voteCount }}</div>
+    </div>
+  </div>
+  <div class="description">{{ data.title }}</div>
+</div>
+
+<!--<p-card [style]="{}" header="{{ data.title }}">-->
+<!--  <ng-template pTemplate="header">-->
+<!--    <img-->
+<!--      (click)="openPopup()"-->
+<!--      [alt]="data.title"-->
+<!--      [src]="-->
+<!--        data.posterPath-->
+<!--          ? 'https://image.tmdb.org/t/p/original' + data.posterPath-->
+<!--          : '/assets/images/no-poster.png'-->
+<!--      "-->
+<!--      [style]="{ height: '100%' }"-->
+<!--    />-->
+<!--    <div class="rate">-->
+<!--      <div class="rate-img"></div>-->
+<!--      <div-->
+<!--        class="color-{{-->
+<!--          data.voteAverage >= 8-->
+<!--            ? 'green'-->
+<!--            : data.voteAverage > 5-->
+<!--            ? 'orange'-->
+<!--            : 'red'-->
+<!--        }}"-->
+<!--      >-->
+<!--        {{ data.voteAverage ? data.voteAverage.toFixed(1) : "No votes" }}-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="watched">-->
+<!--      <div class="watched-img"></div>-->
+<!--      <div class="watched-count">{{ data.voteCount }}</div>-->
+<!--    </div>-->
+<!--  </ng-template>-->
+<!--</p-card>-->

@@ -1,23 +1,23 @@
-.about__container {
+.about-container {
   row-gap: 2rem;
   text-align: center;
 }
 
-.about__subtitle {
+.about-subtitle {
   margin-bottom: var(--mb-2);
 }
 
-.about__img {
+.about-img {
   justify-self: center;
 }
 
-.about__img img {
+.about-img img {
   width: 200px;
   border-radius: .5rem;
 }
 
 @media screen and (min-width: 576px) {
-  .about__container {
+  .about-container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     text-align: initial;
@@ -25,11 +25,11 @@
 }
 
 @media screen and (min-width: 768px) {
-  .about__container {
+  .about-container {
     padding-top: 2rem;
   }
 
-  .about__img img {
+  .about-img img {
     width: 300px;
   }
 }

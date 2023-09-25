@@ -1,5 +1,11 @@
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+@import "primeflex/primeflex.css";
+
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -24,6 +30,25 @@
   /*===== z index =====*/
   --z-back: -10;
   --z-fixed: 100;
+
+  /*==== for snake ====*/
+  --board-color: #d8ebe4;
+  --snake-color: #fed049;
+  --food-color: #007580;
+  --head-color: #00801a;
+
+  --dpad-radius: 17%;
+  --dpad-radius-in: 20%;
+  --dpad-fg: #ddd;
+  --dpad-fg-hover: #eee;
+  --dpad-bg: #fff;
+  --arrowcolor: #aaa;
+  --tri-sml-a: 13px;
+  --tri-sml-b: 19px;
+  --tri-lrg-a: 13px;
+  --tri-lrg-b: 19px;
+  --dpad-arrow-shift: 5px;
+  --dpad-arrow-move: 35%;
 }
 
 @media screen and (min-width: 968px) {
@@ -142,26 +167,61 @@ img {
   .nav {
     height: calc(var(--header-height) + 1.5rem);
   }
-  .nav__list {
+  .nav-list {
     display: flex;
     padding-top: 0;
   }
-  .nav__item {
+  .nav-item {
     margin-left: var(--mb-6);
     margin-bottom: 0;
   }
-  .nav__toggle {
+  .nav-toggle {
     display: none;
   }
-  .nav__link {
+  .nav-link {
     color: var(--second-color);
   }
-  .skills__container {
+  .skills-container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     align-items: center;
     text-align: initial;
   }
+}
+
+
+.obstacle {
+  background-image: url('/assets/images/poop.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .3ms ease-in;
+}
+
+.snake {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--snake-color);
+  border: 0.25vmin solid black;
+  transition: all .3ms ease-in;
+}
+
+/* for snake */
+
+.head {
+  background-color: var(--head-color);
+  border-radius: 0 0 50% 50%;
+}
+
+.tail {
+  border-radius: 50% 50% 0 0;
+}
+
+.food {
+  background-image: url("/assets/images/bounty-rune.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transition: all .3ms ease-in;
 }
 
 @media screen and (min-width: 992px) {

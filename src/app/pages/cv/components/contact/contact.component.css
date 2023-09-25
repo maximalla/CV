@@ -1,4 +1,4 @@
-.contact__input {
+.contact-input {
   width: 100%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
@@ -9,7 +9,7 @@
   margin-bottom: var(--mb-4);
 }
 
-.contact__button {
+.contact-button {
   display: block;
   border: none;
   outline: none;
@@ -19,11 +19,11 @@
 }
 
 @media screen and (min-width: 576px) {
-  .contact__form {
+  .contact-form {
     width: 360px;
     padding-top: 2rem;
   }
-  .contact__container {
+  .contact-container {
     justify-items: center;
   }
 }

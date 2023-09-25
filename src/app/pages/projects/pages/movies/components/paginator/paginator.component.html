@@ -1,0 +1,38 @@
+<!--<div *ngIf="dataService.totalPages > 1" class="paginate">-->
+<!--  <div-->
+<!--    (click)="leftClick()"-->
+<!--    [class]="filtersService.page === 1 ? 'left' : 'left active'"-->
+<!--    [style.pointer-events]="filtersService.page === 1 ? 'none' : 'auto'"-->
+<!--  >-->
+<!--    Prev-->
+<!--  </div>-->
+
+<!--  <div-->
+<!--    (click)="pageClick(num)"-->
+<!--    *ngFor="let num of getPaginateNumbers()"-->
+<!--    [class]="num === filtersService.page ? 'page active' : 'page'"-->
+<!--  >-->
+<!--    {{ num }}-->
+<!--  </div>-->
+
+<!--  <div-->
+<!--    (click)="rightClick()"-->
+<!--    [class]="-->
+<!--      filtersService.page === dataService.totalPages ? 'right' : 'right active'-->
+<!--    "-->
+<!--    [style.pointer-events]="-->
+<!--      filtersService.page === dataService.totalPages ? 'none' : 'auto'-->
+<!--    "-->
+<!--  >-->
+<!--    Next-->
+<!--  </div>-->
+<!--</div>-->
+<div class="card flex justify-content-center">
+  <p-paginator
+    (onPageChange)="onPageChange($event)"
+    *ngIf="dataService.totalPages > 1"
+    [first]="filtersService.page - 1"
+    [rows]="1"
+    [totalRecords]="dataService.totalPages"
+  ></p-paginator>
+</div>

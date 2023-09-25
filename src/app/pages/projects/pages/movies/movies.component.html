@@ -1,0 +1,17 @@
+<div class="content">
+
+  <app-movies-header></app-movies-header>
+
+  <h1 *ngIf="dataService.totalPages < 1" class="notFound">
+    Your search for nothing was found.
+  </h1>
+  <app-movie
+    *ngFor="let movieData of dataService.movies"
+    [data]="movieData"
+    class="film-cover"
+  ></app-movie>
+
+  <app-paginator></app-paginator>
+
+  <app-popup *ngIf="dataService.popup"></app-popup>
+</div>

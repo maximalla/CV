@@ -1,0 +1,20 @@
+<div class="head-info">
+  <a class="logo-link" href="/movies"
+    ><span class="logo-title">My Films</span>
+  </a>
+  <div class="inputs">
+    <span class="p-float-label">
+      <input [(ngModel)]="year" id="year" pInputText />
+      <label for="year">year</label>
+    </span>
+    <span class="p-float-label">
+      <input [(ngModel)]="title" id="title" pInputText />
+      <label for="title">title</label>
+    </span>
+    <p-button
+      (click)="search()"
+      label="Search"
+      styleClass="p-button-raised p-button-text"
+    ></p-button>
+  </div>
+</div>

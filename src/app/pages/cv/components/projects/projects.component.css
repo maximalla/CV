@@ -1,23 +1,23 @@
-.project__container {
+.project-container {
   row-gap: 2rem;
 }
 
-.project__img {
+.project-img {
   box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
   border-radius: .5rem;
   overflow: hidden;
 }
 
-.project__img img {
+.project-img img {
   transition: 1s;
 }
 
-.project__img img:hover {
+.project-img img:hover {
   transform: scale(1.1);
 }
 
 @media screen and (min-width: 576px) {
-  .project__container {
+  .project-container {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
     padding-top: 2rem;
@@ -25,7 +25,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .project__container {
+  .project-container {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }

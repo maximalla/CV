@@ -1,0 +1,113 @@
+.movie {
+  color: #21201e;
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+
+.movie-img {
+  position: relative;
+  background-color: #999;
+  width: 100%;
+  height: 83%;
+}
+
+.movie-img img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.rate {
+  background-color: #21201e;
+  border-radius: 2px;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  color: rgb(207, 234, 240);
+}
+
+.rate-img {
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/images/star.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1px 3px 3px 2px;
+}
+
+.rate-count {
+  margin: 1px 2px;
+}
+
+.watched {
+  background-color: #21201e;
+  border-radius: 2px;
+  display: flex;
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  color: rgb(207, 234, 240);
+}
+
+.watched-img {
+  width: 16px;
+  height: 16px;
+  background-image: url("/assets/images/watching-200.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 1px 5px 0 2px;
+}
+
+.watched-count {
+  margin-right: 2px;
+}
+
+
+.description {
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  height: 17%;
+  font-size: 1.8vw;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.color-green {
+  color: #01d901
+}
+
+.color-orange {
+  color: orange
+}
+
+.color-red {
+  color: red
+}
+
+
+@media screen and (max-width: 1000px) {
+  .movie {
+    width: calc(50% - 10px);
+    /*height: 74vw;*/
+
+  }
+
+  .description {
+    font-size: 3vw;
+  }
+}
+
+@media screen and (max-width: 670px) {
+
+  .movie {
+    width: calc(100% - 10px);
+    /*height: 148vw;*/
+  }
+
+  .description {
+    font-size: 7vw;
+  }
+}
