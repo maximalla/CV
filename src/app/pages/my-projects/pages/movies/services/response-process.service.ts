@@ -41,4 +41,12 @@ export class ResponseProcessService {
       return res;
     }, {});
   }
+
+  async responseTrailer() {
+    const data = await this.apiService.loadTrailer();
+    return (
+      'https://www.youtube.com/watch?v=' +
+      data.results[data.results.length - 1].key
+    );
+  }
 }

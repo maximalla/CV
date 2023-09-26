@@ -87,27 +87,3 @@
   color: red
 }
 
-
-@media screen and (max-width: 1000px) {
-  .movie {
-    width: calc(50% - 10px);
-    /*height: 74vw;*/
-
-  }
-
-  .description {
-    font-size: 3vw;
-  }
-}
-
-@media screen and (max-width: 670px) {
-
-  .movie {
-    width: calc(100% - 10px);
-    /*height: 148vw;*/
-  }
-
-  .description {
-    font-size: 7vw;
-  }
-}

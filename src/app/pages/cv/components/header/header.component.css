@@ -4,12 +4,14 @@
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
+  background-color: #dfded2;
+
   box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
 }
 
 /*===== NAV =====*/
 .nav {
+  margin: 0 1%;
   height: var(--header-height);
   display: flex;
   justify-content: space-between;
@@ -80,9 +82,8 @@
 }
 
 @media screen and (min-width: 768px) {
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
+  --header-height: calc(var(--header-height) + 1.5rem);
+
   .nav-list {
     display: flex;
     padding-top: 0;

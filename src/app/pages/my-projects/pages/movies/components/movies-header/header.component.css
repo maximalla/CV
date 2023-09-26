@@ -16,7 +16,8 @@
 .logo-title {
   font-size: 5vw;
   text-decoration-line: none;
-  color: #428cbc;
+  color: var(--first-color);
+
 
   margin-top: 2rem;
   margin-left: 3rem;
@@ -33,11 +34,11 @@
 }
 
 
+
 @media screen and (max-width: 1000px) {
   .movie {
     width: calc(50% - 10px);
     height: 74vw;
-
   }
 
 

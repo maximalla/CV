@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -9,7 +10,15 @@ export class FiltersService {
   private _page = 1;
   private _apiKey = '5874acfd11651a28c55771624f7021f4';
   private _language = 'en-US';
+  private _popupId: number = 0;
 
+  get popupId(): number {
+    return this._popupId;
+  }
+
+  set popupId(value: number) {
+    this._popupId = value;
+  }
   get title(): string {
     return this._title;
   }

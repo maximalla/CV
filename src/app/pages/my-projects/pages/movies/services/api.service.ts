@@ -20,6 +20,16 @@ export class ApiService {
     return this._baseUrl + movie + this.filtersService.toQuery;
   }
 
+  private get _trailerUrl() {
+    return (
+      this._baseUrl +
+      `movie/` +
+      this.filtersService.popupId +
+      '/videos' +
+      this.filtersService.staticParams
+    );
+  }
+
   async loadData() {
     const response = await fetch(this._moviesUrl);
     return await response.json();
@@ -27,6 +37,11 @@ export class ApiService {
 
   async loadGenres() {
     const response = await fetch(this._genresUrl);
+    return await response.json();
+  }
+
+  async loadTrailer() {
+    const response = await fetch(this._trailerUrl);
     return await response.json();
   }
 }
