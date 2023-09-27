@@ -6,179 +6,17 @@
 }
 
 .container {
-  margin: 0;
-  height: 100%;
+  margin: var(--header-height) 0 0 0;
+  height: calc(100vh - var(--header-height));
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
 }
 .container .score-card {
   padding: 20px;
-  color: var(--board-color);
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-.container .mobile-controls {
-  display: none;
-  flex: 1;
-}
-.container .mobile-controls .o-pad {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-.container .mobile-controls .o-pad:after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  width: 20%;
-  height: 20%;
-  top: 50%;
-  left: 50%;
-  background: #ddd;
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  transition: all 0.25s;
-  cursor: pointer;
-}
-.container .mobile-controls .o-pad:hover:after {
-  width: 30%;
-  height: 30%;
-}
-.container .mobile-controls .o-pad a {
-  display: block;
-  position: absolute;
-  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  width: 50%;
-  height: 50%;
-  text-align: center;
-  transform: rotate(45deg);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.container .mobile-controls .o-pad a:before {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  top: 50%;
-  left: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-  transition: all 0.25s;
-  cursor: pointer;
-  display: none;
-}
-.container .mobile-controls .o-pad a:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-radius: 5px;
-  border-style: solid;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  transition: all 0.25s;
-}
-.container .mobile-controls .o-pad a.up {
-  bottom: 50%;
-  left: 50%;
-  transform: translate(-50%, -20%) rotate(45deg);
-  border-top-left-radius: 50%;
-  z-index: 1;
-}
-.container .mobile-controls .o-pad a.up:hover {
-  background: linear-gradient(315deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
-}
-.container .mobile-controls .o-pad a.up:before {
-  left: 57%;
-  top: 57%;
-}
-.container .mobile-controls .o-pad a.up:after {
-  left: 53%;
-  top: 53%;
-  border-width: 0 var(--tri-lrg-a) var(--tri-lrg-b) var(--tri-lrg-a);
-  border-color: transparent transparent var(--arrowcolor) transparent;
-}
-.container .mobile-controls .o-pad a.up:active:after {
-  border-bottom-color: #333;
-}
-.container .mobile-controls .o-pad a.down {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, 20%) rotate(45deg);
-  border-bottom-right-radius: 50%;
-  z-index: 1;
-}
-.container .mobile-controls .o-pad a.down:hover {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
-}
-.container .mobile-controls .o-pad a.down:before {
-  left: 43%;
-  top: 43%;
-}
-.container .mobile-controls .o-pad a.down:after {
-  left: 47%;
-  top: 47%;
-  border-width: var(--tri-lrg-b) var(--tri-lrg-a) 0 var(--tri-lrg-a);
-  border-color: var(--arrowcolor) transparent transparent transparent;
-}
-.container .mobile-controls .o-pad a.down:active:after {
-  border-top-color: #333;
-}
-.container .mobile-controls .o-pad a.left {
-  top: 50%;
-  right: 50%;
-  transform: translate(-20%, -50%) rotate(45deg);
-  border-bottom-left-radius: 50%;
-  border: none;
-}
-.container .mobile-controls .o-pad a.left:hover {
-  background: linear-gradient(225deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
-}
-.container .mobile-controls .o-pad a.left:before {
-  left: 57%;
-  top: 43%;
-}
-.container .mobile-controls .o-pad a.left:after {
-  left: 53%;
-  top: 47%;
-  border-width: var(--tri-lrg-a) var(--tri-lrg-b) var(--tri-lrg-a) 0;
-  border-color: transparent var(--arrowcolor) transparent transparent;
-}
-.container .mobile-controls .o-pad a.left:active:after {
-  border-right-color: #333;
-}
-.container .mobile-controls .o-pad a.right {
-  top: 50%;
-  left: 50%;
-  transform: translate(20%, -50%) rotate(45deg);
-  border-top-right-radius: 50%;
-  border: none;
-}
-.container .mobile-controls .o-pad a.right:hover {
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
-}
-.container .mobile-controls .o-pad a.right:before {
-  left: 43%;
-  top: 57%;
-}
-.container .mobile-controls .o-pad a.right:after {
-  left: 47%;
-  top: 53%;
-  border-width: var(--tri-lrg-a) 0 var(--tri-lrg-a) var(--tri-lrg-b);
-  border-color: transparent transparent transparent var(--arrowcolor);
-}
-.container .mobile-controls .o-pad a.right:active:after {
-  border-left-color: #333;
-}
-.container .mobile-controls .o-pad a:hover:after {
-  left: 50%;
-  top: 50%;
 }
 .container .restart-button {
   padding: 0 6px;
@@ -195,8 +33,9 @@
 }
 .container .game-board {
   background-color: var(--board-color);
-  width: 160vmin;
-  height: 80vmin;
+  max-width: 160vmin;
+  width: 90%;
+  aspect-ratio: 2/1;
   display: grid;
   align-self: center;
   grid-template-columns: repeat(40, 1fr);
@@ -241,18 +80,18 @@
 .instruction-button {
   width: 40px;
   height: 40px;
-  color: white;
+  color: #000;
   font-size: 30px;
   border-radius: 50%;
   text-align: center;
   line-height: 38.5px;
   cursor: pointer;
-  border: white solid 3px;
+  border: #000 solid 1px;
 }
 
 .instruction-window {
   position: fixed;
-  top: 10%;
+  top: 15%;
   left: 4%;
   display: none;
   flex-direction: column;
@@ -274,6 +113,167 @@
 
 .instruction-button:hover + .instruction-window {
   display: block;
+}
+
+.mobile-controls {
+  display: none;
+  flex: 1;
+}
+.mobile-controls .o-pad {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.mobile-controls .o-pad:after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 20%;
+  height: 20%;
+  top: 50%;
+  left: 50%;
+  background: #ddd;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.mobile-controls .o-pad:hover:after {
+  width: 30%;
+  height: 30%;
+}
+.mobile-controls .o-pad a {
+  display: block;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  transform: rotate(45deg);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.mobile-controls .o-pad a:before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  top: 50%;
+  left: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s;
+  cursor: pointer;
+  display: none;
+}
+.mobile-controls .o-pad a:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 5px;
+  border-style: solid;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  transition: all 0.25s;
+}
+.mobile-controls .o-pad a.up {
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%) rotate(45deg);
+  border-top-left-radius: 50%;
+  z-index: 1;
+}
+.mobile-controls .o-pad a.up:hover {
+  background: linear-gradient(315deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
+}
+.mobile-controls .o-pad a.up:before {
+  left: 57%;
+  top: 57%;
+}
+.mobile-controls .o-pad a.up:after {
+  left: 53%;
+  top: 53%;
+  border-width: 0 var(--tri-lrg-a) var(--tri-lrg-b) var(--tri-lrg-a);
+  border-color: transparent transparent var(--arrowcolor) transparent;
+}
+.mobile-controls .o-pad a.up:active:after {
+  border-bottom-color: #333;
+}
+.mobile-controls .o-pad a.down {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%) rotate(45deg);
+  border-bottom-right-radius: 50%;
+  z-index: 1;
+}
+.mobile-controls .o-pad a.down:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
+}
+.mobile-controls .o-pad a.down:before {
+  left: 43%;
+  top: 43%;
+}
+.mobile-controls .o-pad a.down:after {
+  left: 47%;
+  top: 47%;
+  border-width: var(--tri-lrg-b) var(--tri-lrg-a) 0 var(--tri-lrg-a);
+  border-color: var(--arrowcolor) transparent transparent transparent;
+}
+.mobile-controls .o-pad a.down:active:after {
+  border-top-color: #333;
+}
+.mobile-controls .o-pad a.left {
+  top: 50%;
+  right: 50%;
+  transform: translate(-20%, -50%) rotate(45deg);
+  border-bottom-left-radius: 50%;
+  border: none;
+}
+.mobile-controls .o-pad a.left:hover {
+  background: linear-gradient(225deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
+}
+.mobile-controls .o-pad a.left:before {
+  left: 57%;
+  top: 43%;
+}
+.mobile-controls .o-pad a.left:after {
+  left: 53%;
+  top: 47%;
+  border-width: var(--tri-lrg-a) var(--tri-lrg-b) var(--tri-lrg-a) 0;
+  border-color: transparent var(--arrowcolor) transparent transparent;
+}
+.mobile-controls .o-pad a.left:active:after {
+  border-right-color: #333;
+}
+.mobile-controls .o-pad a.right {
+  top: 50%;
+  left: 50%;
+  transform: translate(20%, -50%) rotate(45deg);
+  border-top-right-radius: 50%;
+  border: none;
+}
+.mobile-controls .o-pad a.right:hover {
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0) 15%, rgba(255, 255, 255, 0.4) 100%);
+}
+.mobile-controls .o-pad a.right:before {
+  left: 43%;
+  top: 57%;
+}
+.mobile-controls .o-pad a.right:after {
+  left: 47%;
+  top: 53%;
+  border-width: var(--tri-lrg-a) 0 var(--tri-lrg-a) var(--tri-lrg-b);
+  border-color: transparent transparent transparent var(--arrowcolor);
+}
+.mobile-controls .o-pad a.right:active:after {
+  border-left-color: #333;
+}
+.mobile-controls .o-pad a:hover:after {
+  left: 50%;
+  top: 50%;
 }
 
 @media only screen and (max-width: 1025px) {

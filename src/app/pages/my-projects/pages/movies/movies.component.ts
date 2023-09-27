@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component } from '@angular/core';
 import { DataService } from './services/data.service';
 import { ResponseProcessService } from './services/response-process.service';
 
@@ -24,13 +24,5 @@ export class MoviesComponent {
       .catch((error) => {
         console.error('Сталася помилка:', error);
       });
-  }
-  scrollTop: number = 0;
-
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    // Отримуємо поточну кількість прокрученого скролла
-    this.scrollTop = window.scrollY || document.documentElement.scrollTop;
-    console.log(this.scrollTop);
   }
 }

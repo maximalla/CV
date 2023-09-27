@@ -1,19 +1,21 @@
-<div class="container">
-  <app-display></app-display>
-  <div class="keyboard">
-    <app-general-button *ngFor="let button of dataService.buttons.correctOrder">
-      <app-button-action
-        *ngIf="button | enums: 'action'"
-        [label]="button"
-      ></app-button-action>
-      <app-button-numeric
-        *ngIf="button | enums: 'numeric'"
-        [label]="button"
-      ></app-button-numeric>
-      <app-button-operation
-        *ngIf="button | enums: 'operation'"
-        [label]="button"
-      ></app-button-operation>
-    </app-general-button>
+<div class="wrapper">
+  <div class="container">
+    <app-display class="display"></app-display>
+    <div class="keyboard">
+      <app-general-button *ngFor="let button of dataService.buttons.correctOrder" class="general">
+        <app-button-action
+          *ngIf="button | enums: 'action'"
+          [label]="button"
+        ></app-button-action>
+        <app-button-numeric
+          *ngIf="button | enums: 'numeric'"
+          [label]="button"
+        ></app-button-numeric>
+        <app-button-operation
+          *ngIf="button | enums: 'operation'"
+          [label]="button"
+        ></app-button-operation>
+      </app-general-button>
+    </div>
   </div>
 </div>

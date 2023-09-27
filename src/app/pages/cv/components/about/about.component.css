@@ -32,4 +32,8 @@
   .about-img img {
     width: 300px;
   }
+
+  .about-text{
+    content: "234";
+  }
 }
