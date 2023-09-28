@@ -5,6 +5,7 @@ import { MyProjectsComponent } from './pages/my-projects/my-projects.component';
 import { CalculatorComponent } from './pages/my-projects/pages/calculator/calculator.component';
 import { MoviesComponent } from './pages/my-projects/pages/movies/movies.component';
 import { SnakeComponent } from './pages/my-projects/pages/snake/snake.component';
+import { TodoComponent } from './pages/my-projects/pages/todo/todo.component';
 import { WatchesComponent } from './pages/my-projects/pages/watches/watches.component';
 
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'calculator', component: CalculatorComponent },
       { path: 'movies', component: MoviesComponent },
       { path: 'snake', component: SnakeComponent },
+      { path: 'todo', component: TodoComponent },
     ],
   },
 ];

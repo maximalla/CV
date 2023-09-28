@@ -1,0 +1,16 @@
+.wrapper {
+  width:100%;
+  min-width: 600px;
+  max-width: 1024px;
+  margin-top: var(--header-height) ;
+  /*background: white;*/
+
+  /*z-index: 100;*/
+}
+
+.caption {
+  /*min-width: 548px;*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}

@@ -231,6 +231,6 @@ img {
   transition: all .3ms ease-in;
 }
 
-.p-button.p-button-text {
+#moviesPage .p-button.p-button-text {
   color: var(--first-color);
 }
