@@ -124,6 +124,8 @@ img {
 .section {
   padding-top: 3rem;
   padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /*===== LAYOUT =====*/
@@ -147,7 +149,7 @@ img {
 }
 
 .button:hover {
-  box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== MEDIA QUERIES=====*/

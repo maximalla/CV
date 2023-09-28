@@ -11,13 +11,12 @@
         <li class="nav-item"><a [routerLink]="['/projects','movies']" class="nav-link" (click)="hideNavMenu()">Movies</a></li>
         <li class="nav-item"><a [routerLink]="['/projects','snake']" class="nav-link" (click)="hideNavMenu()">Snake</a></li>
         <li class="nav-item"><a [routerLink]="['/projects','todo']" class="nav-link" (click)="hideNavMenu()">Todo</a></li>
-        <!--        <li class="nav-item"><a href="#contact" class="nav-link" (click)="hideNavMenu()">Contact</a></li>-->
       </ul>
 
     </div>
 
     <div class="nav-toggle" id="nav-toggle">
-      <i class='bx bx-menu'(click)="toggleNavMenu()"></i>
+      <i (click)="toggleNavMenu()" class='bx bx-menu'></i>
     </div>
   </nav>
 </header>
