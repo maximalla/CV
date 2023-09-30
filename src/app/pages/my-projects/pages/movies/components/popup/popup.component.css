@@ -1,9 +1,15 @@
 
 .popup-body {
   min-height: 100%;
+
+  padding: 30px 10px;
+
+}
+
+.group {
   display: flex;
   justify-content: center;
-  padding: 30px 10px;
+  align-items:center;
 }
 
 .popup-content {
@@ -17,8 +23,7 @@
 
 .popup-image {
   width: 30%;
-  max-width: 50%;
-
+  aspect-ratio: 2/3;
   display: flex;
 
 }
@@ -26,8 +31,6 @@
 .popup-image img {
   background-repeat: no-repeat;
   background-size: cover;
-  aspect-ratio: 2/3;
-  width: 100%;
   border-radius: 10px;
 }
 
@@ -37,6 +40,11 @@
   padding: 0 20px;
   text-align: justify;
 }
+
+@media screen and (max-width: 1024px) {
+  .popup-image {
+    display: none;
+  }}
 
 @media screen and (max-width: 670px) {
   .popup-img {

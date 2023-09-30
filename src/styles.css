@@ -234,3 +234,10 @@ img {
 #moviesPage .p-button.p-button-text {
   color: var(--first-color);
 }
+
+@media screen and (max-width: 768px) {
+
+  #moviesPage .inputs .p-button.p-button-text {
+    background-color: var(--board-color);
+  }
+}

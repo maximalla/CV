@@ -4,17 +4,20 @@
   </a>
   <div class="inputs">
     <span class="p-float-label">
-      <input [(ngModel)]="year" id="year" pInputText />
-      <label for="year">year</label>
-    </span>
-    <span class="p-float-label">
-      <input [(ngModel)]="title" id="title" pInputText />
+      <input [(ngModel)]="title" id="title" pInputText (keydown.enter)="search()"/>
       <label for="title">title</label>
     </span>
+
+    <span class="p-float-label">
+      <input [(ngModel)]="year" id="year" pInputText (keydown.enter)="search()"/>
+      <label for="year">year</label>
+    </span>
+
     <p-button
-      (click)="search()"
+      (click)="search();hide()"
       label="Search"
       styleClass="p-button-raised p-button-text"
     ></p-button>
   </div>
+  <div class="on-inputs" (click)="showUp()"></div>
 </div>
