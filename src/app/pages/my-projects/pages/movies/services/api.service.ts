@@ -20,10 +20,10 @@ export class ApiService {
     return this._baseUrl + movie + this.filtersService.toQuery;
   }
 
-  private get _trailerUrl() {
+  private get _trailerUrl(): string {
     return (
       this._baseUrl +
-      `movie/` +
+      'movie/' +
       this.filtersService.popupId +
       '/videos' +
       this.filtersService.staticParams

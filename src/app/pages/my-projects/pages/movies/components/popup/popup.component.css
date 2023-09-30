@@ -44,14 +44,25 @@
 @media screen and (max-width: 1024px) {
   .popup-image {
     display: none;
-  }}
-
-@media screen and (max-width: 670px) {
-  .popup-img {
-    width: 100%;
   }
 
+  .popup-text {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 670px) {
   .popup-content > div {
     max-width: 100%;
   }
+}
+
+.trailer {
+  width:100%;
+  margin-top: 20px;
+}
+.trailer > * {
+  border-radius: 20px;
+  width: 100%;
+  aspect-ratio: 2/1;
 }

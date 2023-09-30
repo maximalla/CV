@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from '../../services/api.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { DataService } from '../../services/data.service';
 import { FiltersService } from '../../services/filters.service';
 import { ResponseProcessService } from '../../services/response-process.service';
@@ -14,17 +14,21 @@ export class PopupComponent implements OnInit {
   genres = this.dataService.convertIdsToGenres(
     this.dataService.selectedMovie.genreIds,
   );
-  trailerURL!: string;
+  trailerURL!: SafeResourceUrl;
 
   constructor(
     public readonly dataService: DataService,
     private filtersService: FiltersService,
     public readonly responseService: ResponseProcessService,
+    private sanitizer: DomSanitizer,
   ) {}
 
   async ngOnInit(): Promise<void> {
     this.filtersService.popupId = this.movie.id;
-    this.trailerURL = await this.responseService.responseTrailer();
+
+    this.trailerURL = this.sanitizer.bypassSecurityTrustResourceUrl(
+      await this.responseService.responseTrailer(),
+    );
     console.log(this.trailerURL);
   }
 }
