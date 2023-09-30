@@ -6,6 +6,7 @@
 }
 
 .container {
+  position: relative;
   margin: var(--header-height) 0 0 0;
   height: calc(100vh - var(--header-height));
   width: 100%;
@@ -19,10 +20,9 @@
   align-items: center;
 }
 .container .restart-button {
-  padding: 0 6px;
   color: var(--background-color);
   border-radius: 20px;
-  height: 40px;
+  padding: 5px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -78,15 +78,16 @@
 }
 
 .instruction-button {
-  width: 40px;
-  height: 40px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--board-color);
   color: #000;
   font-size: 30px;
   border-radius: 50%;
-  text-align: center;
-  line-height: 38.5px;
   cursor: pointer;
-  border: #000 solid 1px;
+  z-index: 99;
 }
 
 .instruction-window {
@@ -115,7 +116,13 @@
   display: block;
 }
 
+.score-card > * {
+  font-size: 70%;
+}
+
 .mobile-controls {
+  bottom: 0;
+  position: absolute;
   display: none;
   flex: 1;
 }
@@ -276,7 +283,7 @@
   top: 50%;
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1024px) {
   .mobile-controls {
     margin-top: 10px;
     display: flex !important;

@@ -39,12 +39,9 @@ export class SnakeService {
       } else {
         const prevPart: Position = this.m.snakeBody[i - 1];
         let bodyTurn: number = 0;
-
         if (segment.x > prevPart.x) bodyTurn = 90;
-        if (segment.x < prevPart.x) bodyTurn = -90;
-        if (segment.y > prevPart.y) bodyTurn = -180;
-        if (segment.y < prevPart.y) bodyTurn = 0;
-
+        else if (segment.x < prevPart.x) bodyTurn = -90;
+        else if (segment.y > prevPart.y) bodyTurn = 180;
         snakeElement.style.transform = 'rotate(' + bodyTurn + 'deg)';
       }
       gameBoard.appendChild(snakeElement);
