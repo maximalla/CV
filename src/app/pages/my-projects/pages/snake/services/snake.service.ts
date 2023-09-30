@@ -36,6 +36,16 @@ export class SnakeService {
       if (!i) {
         snakeElement.classList.add('head');
         snakeElement.style.transform = 'rotate(' + this.m.headTurn + 'deg)';
+      } else {
+        const prevPart: Position = this.m.snakeBody[i - 1];
+        let bodyTurn: number = 0;
+
+        if (segment.x > prevPart.x) bodyTurn = 90;
+        if (segment.x < prevPart.x) bodyTurn = -90;
+        if (segment.y > prevPart.y) bodyTurn = -180;
+        if (segment.y < prevPart.y) bodyTurn = 0;
+
+        snakeElement.style.transform = 'rotate(' + bodyTurn + 'deg)';
       }
       gameBoard.appendChild(snakeElement);
     });

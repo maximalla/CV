@@ -9,6 +9,7 @@
 
 .half {
   width: 50%;
+  height: calc(100vh - var(--header-height));
   display: flex;
   justify-content: center;
   align-content: center;
