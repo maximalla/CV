@@ -9,6 +9,9 @@
 }
 
 .project-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
   transition: 1s;
 }
 
