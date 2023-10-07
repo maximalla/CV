@@ -140,21 +140,3 @@ import { FileUploadModule } from 'primeng/fileupload';
   bootstrap: [AppComponent],
 })
 export class AppModule {}
-/*
-    DividerModule,
-    ToastModule,
-    ToolbarModule,
-    FileUploadModule,
-    TableModule,
-    RatingModule,
-    TagModule,
-    DropdownModule,
-    RadioButtonModule,
-    InputNumberModule,
-    ConfirmDialogModule,
-    RippleModule,
-    InputTextModule,
-    HttpClientModule,
-  ],
-
- */

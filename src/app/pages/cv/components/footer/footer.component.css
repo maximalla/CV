@@ -21,6 +21,10 @@
   margin: 0 var(--mb-2);
 }
 
+.footer-icon:hover {
+  color: var(--first-color);
+}
+
 .footer-copy {
   font-size: var(--smaller-font-size);
 }
