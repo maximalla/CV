@@ -7,6 +7,7 @@ import { RouterOutlet } from '@angular/router';
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { CarouselModule } from 'primeng/carousel';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { DialogModule } from 'primeng/dialog';
 import { DividerModule } from 'primeng/divider';
@@ -134,6 +135,7 @@ import { FileUploadModule } from 'primeng/fileupload';
     ConfirmDialogModule,
     RippleModule,
     HttpClientModule,
+    CarouselModule,
   ],
   providers: [MessageService, ConfirmationService, AuthService],
 

@@ -241,3 +241,13 @@ img {
     background-color: var(--board-color);
   }
 }
+
+.p-carousel-items-container img {
+  padding: 3%;
+  border-radius: 6%;
+  overflow: hidden;
+}
+
+.p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+  background-color: var(--first-color);
+}
