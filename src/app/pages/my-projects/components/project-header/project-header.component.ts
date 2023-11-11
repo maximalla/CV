@@ -8,7 +8,7 @@ import { AfterViewInit, Component } from '@angular/core';
 export class ProjectHeaderComponent implements AfterViewInit {
   navMenu!: HTMLElement;
   ngAfterViewInit(): void {
-    this.navMenu = document.getElementById('nav-menu') as HTMLElement;
+    this.navMenu = document.getElementById('navMenu') as HTMLElement;
   }
   toggleNavMenu() {
     this.navMenu.classList.toggle('show');
