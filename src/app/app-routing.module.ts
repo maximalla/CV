@@ -7,6 +7,7 @@ import { MoviesComponent } from './pages/my-projects/pages/movies/movies.compone
 import { SnakeComponent } from './pages/my-projects/pages/snake/snake.component';
 import { TodoComponent } from './pages/my-projects/pages/todo/todo.component';
 import { WatchesComponent } from './pages/my-projects/pages/watches/watches.component';
+import { WeatherComponent } from './pages/my-projects/pages/weather/weather.component';
 
 const routes: Routes = [
   { path: '', component: CVComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'movies', component: MoviesComponent },
       { path: 'snake', component: SnakeComponent },
       { path: 'todo', component: TodoComponent },
+      { path: 'weather', component: WeatherComponent },
     ],
   },
 ];

@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="main-block">
+    <div *ngFor="let data of dataService.weathers" class="single-block"></div>
+  </div>
+  <p>weather works!</p>
+  <p-tabView [(activeIndex)]="activeIndex" [scrollable]="true">
+    <p-tabPanel *ngFor="let tab of scrollableTabs" [header]="tab.title">
+      <p>{{ tab.content  }}</p>
+    </p-tabPanel>
+  </p-tabView>
+</div>
+

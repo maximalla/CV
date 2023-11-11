@@ -63,6 +63,6 @@ export class ModelService {
   }
 
   levelUpdate(): void {
-    this.level = Math.ceil(this.score + 1 / 10);
+    this.level = Math.ceil((this.score + 1) / 10);
   }
 }

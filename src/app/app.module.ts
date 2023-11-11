@@ -20,6 +20,7 @@ import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
 import { SplitButtonModule } from 'primeng/splitbutton';
 import { TableModule } from 'primeng/table';
+import { TabViewModule } from 'primeng/tabview';
 import { TagModule } from 'primeng/tag';
 import { ToastModule } from 'primeng/toast';
 import { ToolbarModule } from 'primeng/toolbar';
@@ -62,6 +63,7 @@ import { DigitalClockComponent } from './pages/my-projects/pages/watches/compone
 import { WatchesComponent } from './pages/my-projects/pages/watches/watches.component';
 import { TodoComponent } from './pages/my-projects/pages/todo/todo.component';
 import { FileUploadModule } from 'primeng/fileupload';
+import { WeatherComponent } from './pages/my-projects/pages/weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -107,6 +109,7 @@ import { FileUploadModule } from 'primeng/fileupload';
 
     TodoComponent,
     MainComponent,
+    WeatherComponent,
   ],
   imports: [
     BrowserModule,
@@ -136,6 +139,7 @@ import { FileUploadModule } from 'primeng/fileupload';
     RippleModule,
     HttpClientModule,
     CarouselModule,
+    TabViewModule,
   ],
   providers: [MessageService, ConfirmationService, AuthService],
 
