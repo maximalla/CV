@@ -4,11 +4,10 @@
     #dt
     [(selection)]="m.selectedTodos"
     [globalFilterFields]="['title', 'completed']"
-    [paginator]="true"
+    [paginator]="todoService.m.todos.length > 10 && true"
     [rowHover]="true"
     [rows]="10"
     [showCurrentPageReport]="true"
-    [tableStyle]="{ width: '100%' }"
     [value]="todoService.m.todos"
     currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     dataKey="id"
@@ -180,71 +179,73 @@
       </div>
     </ng-template>
   </p-table>
-</div>
-<p-dialog
-  [(visible)]="m.todoDialog"
-  [modal]="true"
-  [style]="{ width: '450px', height: '470px' }"
-  header="Todo Details"
-  styleClass="p-fluid"
->
-  <ng-template pTemplate="content">
-    <div class="field">
-      <label for="name">Task</label>
-      <input
-        [(ngModel)]="m.todo.title"
-        autofocus
-        id="name"
-        pInputText
-        required
-        type="text"
-      />
-      <small *ngIf="m.submitted && !m.todo.title?.trim()" class="p-error"
+
+  <p-dialog
+    [(visible)]="m.todoDialog"
+    [modal]="true"
+    [style]="{ width: '450px', height: '470px' }"
+    header="Todo Details"
+    styleClass="p-fluid"
+  >
+    <ng-template pTemplate="content">
+      <div class="field">
+        <label for="name">Task</label>
+        <input
+          [(ngModel)]="m.todo.title"
+          autofocus
+          id="name"
+          pInputText
+          required
+          type="text"
+        />
+        <small *ngIf="m.submitted && !m.todo.title?.trim()" class="p-error"
         >Name is required.</small
-      >
-    </div>
+        >
+      </div>
 
-    <div class="field">
-      <label for="completedd">Status</label>
-      <p-dropdown
-        [(ngModel)]="m.todo.completed"
-        [options]="m.statuses"
-        id="completedd"
-      >
-        <ng-template pTemplate="selectedItem">
-          <p-tag
-            [severity]="getSeverity(m.todo.completed)"
-            [value]="m.todo.completed ? 'COMPLETED' : 'ACTIVE'"
-          ></p-tag>
-        </ng-template>
-        <ng-template let-option pTemplate="item">
-          <p-tag
-            [severity]="getSeverity(option.label === 'COMPLETED')"
-            [value]="option.label"
-          ></p-tag>
-        </ng-template>
-      </p-dropdown>
-    </div>
-  </ng-template>
+      <div class="field">
+        <label for="completedd">Status</label>
+        <p-dropdown
+          [(ngModel)]="m.todo.completed"
+          [options]="m.statuses"
+          id="completedd"
+        >
+          <ng-template pTemplate="selectedItem">
+            <p-tag
+              [severity]="getSeverity(m.todo.completed)"
+              [value]="m.todo.completed ? 'COMPLETED' : 'ACTIVE'"
+            ></p-tag>
+          </ng-template>
+          <ng-template let-option pTemplate="item">
+            <p-tag
+              [severity]="getSeverity(option.label === 'COMPLETED')"
+              [value]="option.label"
+            ></p-tag>
+          </ng-template>
+        </p-dropdown>
+      </div>
+    </ng-template>
 
-  <ng-template pTemplate="footer">
-    <button
-      (click)="hideDialog()"
-      class="p-button-text"
-      icon="pi pi-times"
-      label="Cancel"
-      pButton
-      pRipple
-    ></button>
-    <button
-      (click)="saveTodo()"
-      class="p-button-text"
-      icon="pi pi-check"
-      label="Save"
-      pButton
-      pRipple
-    ></button>
-  </ng-template>
-</p-dialog>
+    <ng-template pTemplate="footer">
+      <button
+        (click)="hideDialog()"
+        class="p-button-text"
+        icon="pi pi-times"
+        label="Cancel"
+        pButton
+        pRipple
+      ></button>
+      <button
+        (click)="saveTodo()"
+        class="p-button-text"
+        icon="pi pi-check"
+        label="Save"
+        pButton
+        pRipple
+      ></button>
+    </ng-template>
+  </p-dialog>
 
-<p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>
+  <p-confirmDialog [style]="{ width: '450px' }"></p-confirmDialog>
+
+</div>
