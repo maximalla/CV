@@ -14,11 +14,13 @@ export class InputService {
 
   getInputs(): void {
     window.addEventListener('keydown', (e) => {
-      if (!this.m.isPaused && !this.m.gameOver) {
-        const direction = AppConstants.keyToDirection[e.code];
-        if (direction) this.setDirection(direction);
-      }
+      this.snakeStatus(AppConstants.keyToDirection[e.code]);
     });
+  }
+
+  snakeStatus(direction: string): void {
+    if (!this.m.isPaused && !this.m.gameOver && direction)
+      this.setDirection(direction);
   }
 
   setDirection(direction: string): void {
